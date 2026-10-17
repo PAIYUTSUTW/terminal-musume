@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "name": "Original vector demo — replace with Live2D renders",
+  "sourceKind": "procedural-svg-demo",
+  "providers": {
+    "codex": {
+      "idle": "codex/idle.gif",
+      "thinking": "codex/thinking.gif",
+      "working": "codex/working.gif",
+      "happy": "codex/happy.gif",
+      "concerned": "codex/concerned.gif",
+      "waiting": "codex/waiting.gif",
+      "explaining": "codex/explaining.gif"
+    },
+    "claude": {
+      "idle": "claude/idle.gif",
+      "thinking": "claude/thinking.gif",
+      "working": "claude/working.gif",
+      "happy": "claude/happy.gif",
+      "concerned": "claude/concerned.gif",
+      "waiting": "claude/waiting.gif",
+      "explaining": "claude/explaining.gif"
+    }
+  }
+}

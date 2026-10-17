@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Terminal Musume · 背景動畫實驗室</title><link rel="stylesheet" href="/style.css"></head>
+<body>
+<main>
+  <header><div class="wordmark"><span class="mark">✳</span> terminal musume<span class="edition">LAB / 01</span></div><span id="connection" class="connection">連線中</span></header>
+  <section class="intro"><p class="eyebrow">A LITTLE COMPANY FOR YOUR TERMINAL</p><h1>讓終端背景，回應你的對話。</h1><p class="lede">思考時陪你思考，完成時一起開心。試試不同回覆，看看角色如何反應。</p></section>
+  <section class="terminal" aria-label="背景動畫預覽">
+    <div class="terminal-bar"><div class="window-dots"><i></i><i></i><i></i></div><span id="terminal-title">Windows Terminal / Claude</span><span class="preview-label">BACKGROUND PREVIEW</span></div>
+    <div class="terminal-body">
+      <img id="avatar" class="avatar" alt="在文字後方活動的示範角色">
+      <div class="console" aria-hidden="true"><p class="muted">PowerShell 7 · ~/my-project</p><p><span class="prompt">❯</span> <span id="cli-name">claude</span></p><p class="console-greeting">今天一起做點什麼？</p><p class="muted">角色顯示在背景，終端文字仍能完整使用。</p><p class="user-line"><span class="prompt">❯</span> 幫我修復登入流程，並確認測試結果。</p><p id="sample-reply" class="sample-reply">正在等待新的對話。</p><p class="cursor-line"><span class="prompt">❯</span> <span class="cursor"></span></p></div>
+      <div class="terminal-footer"><span><span id="state-dot" class="state-dot"></span><span id="state-label">待命</span></span><span id="character-label">橘髮示範角色</span></div>
+    </div>
+  </section>
+  <section class="controls" id="demo-controls" hidden>
+    <div class="control-top"><div class="agent-switch" role="group" aria-label="選擇角色"><button type="button" data-provider="claude" class="selected">橘髮 / Claude</button><button type="button" data-provider="codex">白髮 / Codex</button></div><span class="hint">先選一個動作，或輸入一段回覆</span></div>
+    <div id="poses" class="poses" role="group" aria-label="試播動作"><button data-state="idle">待命</button><button data-state="thinking">思考</button><button data-state="working">工作中</button><button data-state="happy">開心</button><button data-state="concerned">擔心</button><button data-state="waiting">等你回覆</button><button data-state="explaining">解說</button></div>
+    <form id="reply-form"><label for="reply">試一段 AI 回覆</label><div class="reply-input"><textarea id="reply" rows="2" maxlength="12000">全部測試通過，已完成修復，沒有錯誤。</textarea><button class="primary" type="submit">看看反應 <span>↗</span></button></div></form>
+    <div class="samples"><span>例如</span><button data-sample="全部測試通過，已完成修復，沒有錯誤。">修好了</button><button data-sample="修復已完成，但目前還有三個測試失敗，尚未解決。">還有問題</button><button data-sample="請先確認要使用哪一種登入方式，再告訴我你的選擇。">需要你決定</button><button data-sample="這個函式會先驗證輸入，接著更新登入狀態。">解釋原理</button></div>
+  </section>
+  <footer><p id="asset-notice">載入動畫素材中</p><p id="background-status">本機預覽</p></footer><p id="error" class="error" role="alert" hidden></p>
+</main><script type="module" src="/app.js"></script>
+</body></html>

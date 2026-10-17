@@ -1,0 +1,31 @@
+{
+  "name": "terminal-musume",
+  "version": "0.2.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "type": "module",
+  "description": "Reply-aware animated backgrounds for the original Windows Terminal",
+  "files": ["bin/", "src/", "web/", "assets/demo/", "THIRD_PARTY_NOTICES.md"],
+  "engines": { "node": ">=22" },
+  "bin": { "terminal-musume": "bin/terminal-musume.mjs", "musume": "bin/musume.mjs" },
+  "scripts": {
+    "assets": "node scripts/export-demo.mjs",
+    "start": "node bin/terminal-musume.mjs start --demo",
+    "test": "node --test test/*.test.mjs",
+    "check": "node scripts/check-assets.mjs",
+    "test:preview": "node scripts/verify-preview.mjs",
+    "test:native": "node scripts/verify-native-routing.mjs",
+    "demo:windows": "node scripts/launch-windows-demo.mjs",
+    "record:windows": "node scripts/record-windows-demo.mjs",
+    "test:v2": "node --test test/context.test.mjs test/routing.test.mjs test/multi-terminal.test.mjs test/controller.test.mjs test/agent-runner.test.mjs test/tmux.test.mjs test/tmux-integration.test.mjs test/integration-v2.test.mjs",
+    "demo:v2": "node scripts/verify-windows-v2.mjs --keep"
+  },
+  "dependencies": {
+    "jsonc-parser": "3.3.1"
+  },
+  "devDependencies": {
+    "@resvg/resvg-js": "2.6.2",
+    "gifenc": "1.0.3",
+    "playwright": "1.64.1"
+  }
+}

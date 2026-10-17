@@ -1,0 +1,28 @@
+node_modules/
+.runtime/
+artifacts/
+# Local handoff notes and development-session history.
+docs/tickets/
+# Locally linked character/model sources have not been cleared for redistribution.
+assets/live2d/
+assets/references/
+*.tmp
+.env
+.env.*
+!.env.example
+*.log
+*.pem
+*.key
+*.p12
+*.pfx
+.DS_Store
+Thumbs.db
+# Machine-local credentials and agent state; shared project instructions stay visible.
+.npmrc
+.netrc
+.claude/settings.local.json
+.claude/projects/
+.codex/auth.json
+.codex/sessions/
+credentials.json
+service-account*.json
